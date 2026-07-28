@@ -60,6 +60,18 @@ font-size: 40px;
 <button onclick="jump()">Springen</button>
 <script>
 let dino = document.getElementById("dino");
+let cactus = document.getElementById("cactus");
+let cactusX = 380;
+
+setInterval(function () {
+cactusX = cactusX - 5;
+
+if (cactusX < -40) {
+cactusX = 380;
+}
+
+cactus.style.left = cactusX + "px";
+}, 30);
 
 function jump() {
 dino.style.bottom = "120px";
