@@ -5,18 +5,17 @@
 
 <style>
 Körper {
-<a href="dino-run.html">🎮 Dino Run Starten</a>
 text-align: center;
-Schriftart: Arial;
+Schriftart: Arial, serifenlos;
 Hintergrund: hellblau;
 }
 
 #Spiel {
 Breite: 400px;
 Höhe: 250px;
-Hintergrund: weiß;
 Rand: automatisch;
 Rahmen: 3px durchgehend schwarz;
+Hintergrund: weiß;
 Position: relativ;
 Überlauf: versteckt;
 }
@@ -24,28 +23,22 @@ Position: relativ;
 #dino {
 Position: absolut;
 unten: 0;
-links: 100px;
+links: 50px;
 Schriftgröße: 50px;
-display: block;
 }
 
 #Münze {
 Position: absolut;
 unten: 80px;
-rechts: 0;
+rechts: 20px;
 Schriftgröße: 35px;
 }
-
-#Punktzahl {
-Schriftgröße: 25px;
-}
 </style>
-
 </head>
 
 <body>
 
-<h1>🦖 dino Run 🦖</h1>
+<h1>🦖 Dino Run 🦖</h1>
 
 <div id="score">Punkte: 0</div>
 
@@ -57,39 +50,3 @@ Schriftgröße: 25px;
 <br>
 
 <button onclick="jump()">Springen</button>
-
-<script>
-  
-let dino = document.getElementById("dino");
-
-Funktion jump() {
-dino.style.bottom = "300px";
-
-setTimeout(function(){
-dino.style.bottom = "0px";
-}, 500);
-}
-setze Punktzahl = 0;
-let dino = document.getElementById("dino");
-
-Funktion jump() {
-dino.style.transform = "translateY(-150px)";
-
-setTimeout(function(){
-dino.style.bottom = "0px";
-}, 500);
-}
-
-setInterval(function(){
-Score++;
-document.getElementById("score").innerHTML = "Punkte: " + score;
-
-document.getElementById("coin").style.right =
-Math.random() * 350 + "px";
-
-}, 1000);
-
-</script>
-
-</body>
-</html>
