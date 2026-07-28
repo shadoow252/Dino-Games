@@ -57,7 +57,16 @@ Schriftgröße: 25px;
 <button onclick="jump()">Springen</button>
 
 <script>
+  
+let dino = document.getElementById("dino");
 
+Funktion jump() {
+dino.style.bottom = "100px";
+
+setTimeout(function(){
+dino.style.bottom = "0px";
+}, 500);
+}
 setze Punktzahl = 0;
 let dino = document.getElementById("dino");
 
