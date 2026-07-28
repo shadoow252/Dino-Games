@@ -22,12 +22,12 @@ Position: relativ;
 
 #dino {
 Position: absolut;
-unten: 0;
-links: 50px;
+bottom: 0;
+left: 50px;
 Schriftgröße: 50px;
 }
 
-#Münze {
+#coin {
 Position: absolut;
 unten: 80px;
 rechts: 20px;
@@ -40,7 +40,7 @@ Schriftgröße: 35px;
 
 <h1>🦖 Dino Run 🦖</h1>
 
-<div id="score">Punkte: 0</div>
+<div id="score">punkte: 0</div>
 
 <div id="game">
 <div id="dino">🦖</div>
@@ -50,3 +50,18 @@ Schriftgröße: 35px;
 <br>
 
 <button onclick="jump()">Springen</button>
+<script>
+let dino = document.getElementById("dino");
+
+function jump() {
+dino.style.bottom = "120px";
+
+setTimeout(function () {
+
+dino.style.bottom = "0px";
+}, 500);
+}
+</script>
+
+</body>
+</html>
