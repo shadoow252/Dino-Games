@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dino Run</title>
+
+<style>
+Körper {
+text-align: center;
+Schriftart: Arial;
+Hintergrund: hellblau;
+}
+
+#Spiel {
+Breite: 400px;
+Höhe: 250px;
+Hintergrund: weiß;
+Rand: automatisch;
+Rahmen: 3px durchgehend schwarz;
+Position: relativ;
+Überlauf: versteckt;
+}
+
+#dino {
+Position: absolut;
+unten: 0;
+links: 50px;
+Schriftgröße: 50px;
+}
+
+#Münze {
+Position: absolut;
+unten: 80px;
+rechts: 0;
+Schriftgröße: 35px;
+}
+
+#Punktzahl {
+Schriftgröße: 25px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>🦖 Dino Run 🦖</h1>
+
+<div id="score">Punkte: 0</div>
+
+<div id="game">
+<div id="dino">🦖</div>
+<div id="coin">🪙</div>
+</div>
+
+<br>
+
+<button onclick="jump()">Springen</button>
+
+<script>
+
+setze Punktzahl = 0;
+let dino = document.getElementById("dino");
+
+Funktion jump() {
+dino.style.bottom = "100px";
+
+setTimeout(function(){
+dino.style.bottom = "0px";
+}, 500);
+}
+
+setInterval(function(){
+Score++;
+document.getElementById("score").innerHTML = "Punkte: " + score;
+
+document.getElementById("coin").style.right =
+Math.random() * 350 + "px";
+
+}, 1000);
+
+</script>
+
+</body>
+</html>
