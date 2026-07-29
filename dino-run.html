@@ -70,12 +70,12 @@ let cactus = document.getElementById("cactus");
 let cactusX = 380;
 
 setInterval(function () {
-
-  let dinoBottom = parseInt(dino.style.bottom) || 0;
   
   if(!gameStarted) {
     return;
   }
+
+  let dinoBottom = parseInt(dino.style.bottom) || 0;
 cactusX = cactusX - 5;
 
 if (cactusX < -40) {
