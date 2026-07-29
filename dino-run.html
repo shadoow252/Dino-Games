@@ -70,6 +70,8 @@ let cactus = document.getElementById("cactus");
 let cactusX = 380;
 
 setInterval(function () {
+
+  let dinoBottom = parseInt(dino.style.bottom) || 0;
   
   if(!gameStarted) {
     return;
@@ -82,6 +84,8 @@ cactusX = 380;
 
 cactus.style.left = cactusX + "px";
 }, 30);
+  if (cactusX < 80 && cactusX > 20 && dinoBottom < 50) {
+    alert("💥 Game Over!");
 
 function jump() {
 dino.style.bottom = "120px";
