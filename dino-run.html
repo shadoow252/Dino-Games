@@ -56,14 +56,23 @@ font-size: 40px;
 </div>
 
 <br>
-
+<button id="startButton" oneclick="startGame()">▶️ spiel starten</button>
 <button onclick="jump()">Springen</button>
 <script>
 let dino = document.getElementById("dino");
+let gameStarted = false;
+function startGame() {
+gameStarted = true;
+document.getElementById("startButton").style.display = "none";
+}
 let cactus = document.getElementById("cactus");
 let cactusX = 380;
 
 setInterval(function () {
+  
+  if(!gameStarted) {
+    return;
+  }
 cactusX = cactusX - 5;
 
 if (cactusX < -40) {
